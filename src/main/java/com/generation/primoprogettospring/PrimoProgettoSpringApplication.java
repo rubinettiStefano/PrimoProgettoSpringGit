@@ -26,5 +26,6 @@ public class PrimoProgettoSpringApplication implements CommandLineRunner
     public void run(String... args) throws Exception
     {
         bl.stampaTuttePersone();
+
     }
 }
