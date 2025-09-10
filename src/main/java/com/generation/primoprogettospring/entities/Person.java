@@ -1,12 +1,11 @@
 package com.generation.primoprogettospring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor //il costruttore con tutti i parametri
 @NoArgsConstructor  //il costruttore vuoto
@@ -22,5 +21,8 @@ public class Person
     private String name, surname;
     private LocalDate dob; // Date of birth
     private String language;
+
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
+    private List<Cloth> clothes =  new ArrayList<>();
 
 }
