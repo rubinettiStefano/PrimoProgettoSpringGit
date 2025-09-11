@@ -31,6 +31,5 @@ public interface PersonRepository extends JpaRepository<Person,Long>
     //metodo per prendere tutte le persone che parlano una lingua passata come parametro
     //e che sono nati in un certo anno
 
-    @Query("select p FROM Person p WHERE p.clothes.size>0")
-    List<Person> leggiNonNudi();
+
 }
